@@ -759,7 +759,9 @@ main(int argc, char *argv[])
 	mpf_clear(pi);
 	mpf_clear(qi);
 
+	mpf_set_prec_raw(t1, mpf_get_default_prec()); //restore original precision for clear
 	mpf_clear(t1);
+	mpf_set_prec_raw(t2, mpf_get_default_prec());
 	mpf_clear(t2);
 	return 0;
 }
